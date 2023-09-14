@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page 2</title>
+    <link rel="stylesheet" href="Page 1.css">
+</head>
+<body onresize="myResize()">
+        <ul>
+            <li><a  href="Page1.html">Home</a></li>
+            <li><a class="active" href="Page2.html">Page 2</a></li>
+          
+          </ul>
+    
+    <div class="image-container">
+    
+        <img src="Media/Pic1.jpg" alt="Image 1" class="image" id="image1">
+       
+    </div>
+    
+    <button onclick="changeImage('image1')">onclick</button><br>
+    <h3>Blur Event</h3>
+    Blur: <input type="text" id="Blur" onblur="myBlur()">
+<br>
+<h3>Change Event</h3>
+<select id="mySelect" onchange="myChange()">
+    <option value="10">10</option>
+    <option value="20">20</option>
+    <option value="30">30</option>
+    <option value="40">40</option>
+  </select>
+  <p id="change"></p>
+
+  <h3>dbClick Event</h3>
+  <p ondblclick="myDB()">Double Click Me!</p><br>
+
+<p id="DB"></p>
+
+<h3>Focusin Event!</h3><br>
+Enter Something <input type="text" onfocusin="myFocusin(this)"><br>
+
+<h3>onmouseover Event</h3>
+<img onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="0" src="Media/Pic1.jpg" alt="Dog" width="32" height="32"><br>
+<h3>Resize Event</h3>
+<p>Try To Resize The Browser Bruh</p>
+
+<h3>AnimationStart Event</h3>
+
+
+<div id="myDIV" onclick="myFunction()">Click me to start the animation.</div>
+
+
+    
+
+</body>
+
+<script>
+    function changeImage(imageId) {
+            var imageElement = document.getElementById(imageId);
+            var currentSrc = imageElement.src;
+            
+           
+            var imageSources = {
+                'image1': 'Media/Pic2.jpg', 
+                'image2': 'Media/Pic2.jpg',
+                'image3': 'Media/Pic2.jpg',
+            };
+
+            
+            if (imageSources.hasOwnProperty(imageId)) {
+                
+                imageElement.src = imageSources[imageId];
+            }
+        }
+        function myBlur() {
+  let x = document.getElementById("Blur");
+  x.value = x.value.toUpperCase();
+}
+function myChange() {
+  var x = document.getElementById("mySelect").value;
+  document.getElementById("change").innerHTML = "You selected: " + x;
+}
+function myDB() {
+  document.getElementById("DB").innerHTML += "Well Hello There Dummy! ";
+}
+function myFocusin(x) {
+  x.style.background = "Red";
+}
+
+function bigImg(x) {
+  x.style.height = "64px";
+  x.style.width = "64px";
+}
+
+function normalImg(x) {
+  x.style.height = "32px";
+  x.style.width = "32px";
+}
+function myResize() {
+  alert("YO! go back to the original size!");
+}   
+const div1 = document.getElementById("myDIV");
+
+function myFunction() {
+  div1.style.animation = "mymove 4s 2";
+}
+
+div1.addEventListener("animationstart", myStartFunction);
+div1.addEventListener("animationiteration", myRepeatFunction);
+div1.addEventListener("animationend", myEndFunction);
+
+function myStartFunction() {
+  this.innerHTML = "The animation has started";
+  this.style.backgroundColor = "pink";
+}
+function myRepeatFunction() {
+  this.innerHTML = "The animation was played again";
+  this.style.backgroundColor = "lightblue";
+}
+function myEndFunction() {
+  this.innerHTML = "The animation has completed";
+  this.style.backgroundColor = "lightgray";
+}
+    
+</script>
+</html>

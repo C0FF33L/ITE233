@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+ .imgV1{
+    background-color: rgba(239, 13, 13, 0.8);
+  text-align: center;
+
+  font-size: 30px;
+ }
+
+ .imgV2{
+    background-color: rgba(228, 5, 5, 0.942);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+    
+ }
+  img{
+    width: 100px;
+    height: 100px;
+    border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+
+
+  }
+  
+  video{
+    width: 350px;
+    height: 350px;
+    margin: 50px;
+  }
+
+  header {
+    background-color: #4d2960;
+    color: #ff0f0f;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  nav {
+    background-color: #ed7f7f;
+    color: #f80202;
+    padding: 10px;
+    
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 15px;
+  }
+  
+  section {
+    padding: 20px;
+    
+  }
+
+  
+  footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  /* Responsive styles */
+  @media only screen and (max-width: 700px) {
+    nav {
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+        background-color: #82d8f8;
+        color: #100d0d;
+        text-align: center;
+        padding: 10px;
+      }
+      section {
+        padding: 50px;
+        background-color: transparent;
+        transition: background-color 1.5s ease; 
+      }
+
+      section:hover {
+        background-color: #4cb8f7; 
+      }
+      h2{
+        font-style: bold;
+      }
+      
+      img{
+        width: 200px;
+        height: 200px;
+      }
+      footer {
+        background-color: #0567d1;
+        color: #110b0b;
+        text-align: center;
+        padding: 10px;
+        font-size: larger;
+      }
+  }
+    </style>
+  <title>SAS 10</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+  <header>
+    <h1>SAS 10</h1>
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Show</a>
+    <a href="#">Join Us</a>
+  </nav>
+
+  <section class="image-section">
+    <h2>Videos</h2>
+    <div class="image-container"><center>
+      <video  controls src="img/Rick.mp4" style="width:350px; height: 350px;"></video>
+
+      <source src-="img/Rick.mp4">
+        <video  controls src="img/Rick.mp4" style="width:350px; height: 350px;"></video>
+
+        <source src-="img/Rick.mp4">
+            <video  controls src="img/Rick.mp4" style="width:350px;height: 350px;"></video>
+            <source src-="img/Rick.mp4">
+
+        </center>
+    </div>
+  </section>
+<hr>
+  <center>
+<div style="width:100%;height:700px;">
+
+    <div style="width: 25%; height: 700px; float:left">
+
+        <img src="img/Moonblues.png" alt="Moonblues" style=" margin-top: 100px;"><br>
+        <img src="img/Owly.png" alt="Owly">
+    </div>
+
+
+    
+    <div style="width: 50%; height: 700px;float:left;">
+        <video  controls src="img/Rick.mp4" width="350px" height="350px" style=" margin-top: 5px;"></video>
+    </div>
+
+
+    
+    <div style="width: 25%; height: 700px; float:left">
+        <img src="img/Coffee Wolf.png" alt="CoffeeWolf" style=" margin-top: 100px;"><br>
+      <img src="img/N1BolasLogo.jpg" alt="N1BolasLogo">
+    </div>
+
+
+
+   
+</div>
+</center>
+
+
+
+
+
+  <footer>
+    <p> 2023 My Website. All rights reserved.</p>
+  </footer>
+</body>
+</html>
